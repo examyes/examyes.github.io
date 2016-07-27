@@ -2,9 +2,9 @@
 permalink:           pretty
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+title:               Q_ASSERT
+tagline:             代码里多用断言，生活中少用断言
+url:                 http://qassert.com
 paginate:            1
 baseurl:             ""
 
@@ -17,9 +17,9 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              ExAMYEs
+  url:               http://qassert.com
+  email:             ExAMYEs
 
 # Custom vars
 version:             2.0.0

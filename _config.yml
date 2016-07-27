@@ -5,7 +5,7 @@ permalink:           pretty
 title:               Q_ASSERT
 tagline:             代码里多用断言，生活中少用断言
 url:                 http://qassert.com
-paginate:            1
+paginate:            7
 baseurl:             ""
 
 # Assets

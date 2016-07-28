@@ -132,11 +132,3 @@ div.tweet i {
   margin-right: 0.5em;
   padding: 0px 2px;
 }
-
-div.footer { 
-    width: 100%; 
-    height: 20px;
-    text-align: center;
-    font-size: 90%;
-    clear:both; 
-}

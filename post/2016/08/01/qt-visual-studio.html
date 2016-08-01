@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<link rel="Shortcut Icon" href="http://qassert.com/favicon.ico" />
+<title>Qt Visual Studio</title>
+</head>
+
+<body>
+
+<xmp theme="united" style="display:none;">
+
+## 1. 将普通Win32项目转换为Qt项目
+http://stackoverflow.com/questions/2088315/how-to-convert-a-regular-win32-vc-vcproj-project-to-a-qt-project
+
+- Right click on your project in "Solution Explorer", click on "Unload Project"
+- Right click on your project in "Solution Explorer", click on "Edit .vcxproj"
+- Add line <Keyword>Qt4VSv1.0</Keyword> between the tags <PropertyGroup Label="Globals"> and </PropertyGroup>.
+- Right click on your project in "Solution Explorer", click on "Reload Project"
+- Right click on your project in "Solution Explorer", click on "Convert project to Qt Add-in project"
+
+## 2. Visual Assist
+
+### 2.1 Visual Assist X对Qt的支持
+在启动VS前必须设置QTDIR这个环境变量，可以使用一个批处理文件启动Visual Studio, 脚本内容如下：
+```bat
+set QTDIR=C:\Qt\Qt5.5.1-VS2013\5.5\msvc2013
+echo %QTDIR%
+cd "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\"
+start devenv.exe
+
+```
+
+### 2.2 Visual Assist配置
+VS2010不要要配置，VS2013需要配置
+
+#### 参考链接
+- http://blog.wholetomato.com/2008/11/20/using-qt-44-with-visual-assist-x/
+- http://support.wholetomato.com/default.asp?W451
+
+#### 需要包含的目录
+在(VAssistX|Visual Assist X Options|Projects|C/C++ Directories)中设置, Platform选择Custom
+
+需要包含的头文件目录列表如下所示：(Qt 5.5.1 + VS2010)
+>
+$(QTDIR)\include  
+$(QTDIR)\include\ActiveQt  
+$(QTDIR)\include\Enginio  
+$(QTDIR)\include\Qt3DCore  
+$(QTDIR)\include\Qt3DInput  
+$(QTDIR)\include\Qt3DQuick  
+$(QTDIR)\include\Qt3DQuickRenderer  
+$(QTDIR)\include\Qt3DRenderer  
+$(QTDIR)\include\QtANGLE  
+$(QTDIR)\include\QtBluetooth  
+$(QTDIR)\include\QtCLucene  
+$(QTDIR)\include\QtConcurrent  
+$(QTDIR)\include\QtCore  
+$(QTDIR)\include\QtDBus  
+$(QTDIR)\include\QtDeclarative  
+$(QTDIR)\include\QtDesigner  
+$(QTDIR)\include\QtDesignerComponents  
+$(QTDIR)\include\QtGui  
+$(QTDIR)\include\QtHelp  
+$(QTDIR)\include\QtLocation  
+$(QTDIR)\include\QtMultimedia  
+$(QTDIR)\include\QtMultimediaQuick_p  
+$(QTDIR)\include\QtMultimediaWidgets  
+$(QTDIR)\include\QtNetwork  
+$(QTDIR)\include\QtNfc  
+$(QTDIR)\include\QtOpenGL  
+$(QTDIR)\include\QtOpenGLExtensions  
+$(QTDIR)\include\QtPlatformHeaders  
+$(QTDIR)\include\QtPlatformSupport  
+$(QTDIR)\include\QtPositioning  
+$(QTDIR)\include\QtPrintSupport  
+$(QTDIR)\include\QtQml  
+$(QTDIR)\include\QtQmlDevTools  
+$(QTDIR)\include\QtQuick  
+$(QTDIR)\include\QtQuickParticles  
+$(QTDIR)\include\QtQuickTest  
+$(QTDIR)\include\QtQuickWidgets  
+$(QTDIR)\include\QtScript  
+$(QTDIR)\include\QtScriptTools  
+$(QTDIR)\include\QtSensors  
+$(QTDIR)\include\QtSerialPort  
+$(QTDIR)\include\QtSql  
+$(QTDIR)\include\QtSvg  
+$(QTDIR)\include\QtTest  
+$(QTDIR)\include\QtUiPlugin  
+$(QTDIR)\include\QtUiTools  
+$(QTDIR)\include\QtWebChannel  
+$(QTDIR)\include\QtWebKit  
+$(QTDIR)\include\QtWebKitWidgets  
+$(QTDIR)\include\QtWebSockets  
+$(QTDIR)\include\QtWidgets  
+$(QTDIR)\include\QtWinExtras  
+$(QTDIR)\include\QtXml  
+$(QTDIR)\include\QtXmlPatterns  
+$(QTDIR)\include\QtZlib  
+$(QTDIR)\mkspecs\win32-msvc2005
+
+需要包含的源文件目录如下：
+> 
+$(QTDIR)\..\Src  
+
+## 3. 常见错误
+
+### 3.1 编译错误
+#### Q_INTERFACES undefined interface
+
+在创建工程的时候，如果在“C/C++ -> 常规 -> 附加包含目录”等配置好之前，就添加源代码、头文件，就可能会造成这个错误。
+
+> 解决办法： 删除已经添加的文件，重新添加
+
+### 3.2 运行时错误
+
+* 无法加载插件。无法加载插件的原因可能有很多，例如：
+  - 插件目录配置错误
+  - 插件的MANIFEST.MF出了问题
+  - Library Path 配置错误等
+
+  对项目配置有任何更改，可能都需要删除已经添加的文件，然后重新添加
+
+### Qt4和Qt5的 VS Add-in不能同时安装的，切记！！  
+
+### Visual Studio Add-in相关问题
+
+* 如果出现“Cannot register qt VS2010 help!”和"Cannot register qt5vs VS2010 help"等错误，不用担心。这只是代表了帮助功能的缺失。
+还是用Qt Assistan看帮助吧，反正Visual Studio Add-in提供的文档可能不是最新的，也可能对应的Qt版本不对。
+  可以参考如下链接：
+  - MSDN Library for vs 2010 下载和安装， http://www.cnblogs.com/apigiraffe/p/3208149.html。
+
+
+## 4. 其他
+* moc很容易出错，并且出的错一般都很诡异。因此，当遇到诡异问题的时候，观察一下moc是否正常。举个例子，如果项目中添加了qrc文件，但是在<Generated Files>文件夹下找不到相应的cpp文件，则很有可能qrc配置出错，或者是文件丢失了。打开qrc_<...>.cpp文件，可以大概看出来包含了哪些文件。
+
+* 链接器 -> 命令行 -> 其他选项：加入 /SUBSYSTEM:CONSOLE, 可以让GUI程序拥有命令行窗口  
+  如果是在Qt Creator中，需要将.pro文件同目录下的.user文件删除，重新构建，才能出现命令行窗口
+
+* qDebug() 在打印QString时，如果QString包含中文，会无法正确显示。有两种方法：    
+  - 将QString用qUtf8Printable包裹  
+    qDebug() << qUtf8Printable(QString("中文"));
+  - 直接调用QString::toUtf8().constData()
+    qDebug() << QString("中文").toUtf8().constData();
+
+</xmp>
+
+<script src="http://ob0e7n022.bkt.clouddn.com/strapdown.js"></script>
+
+<a href="http://qassert.com"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1000; margin: 0;" src="http://ob0e7n022.bkt.clouddn.com/images/return-home.png" alt="返回首页"></a>
+
+</body>
+
+</html>

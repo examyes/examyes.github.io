@@ -25,6 +25,7 @@
 参考: 
 
 + http://stackoverflow.com/questions/12564289/how-can-i-add-property-dynamically-to-a-qml-element
++ https://forum.qt.io/topic/49746/solved-how-to-create-c-object-dynamically-from-within-qml/5
 + [Importing JavaScript Resources in QML](http://doc.qt.io/qt-5/qtqml-javascript-imports.html)
 + [Dynamic QML Object Creation from JavaScript](http://doc.qt.io/qt-5/qtqml-javascript-dynamicobjectcreation.html)
 
@@ -32,6 +33,8 @@
 
 + 使用property var，不需要外挂脚本，代码简单清晰，但是会对外暴露不必要的属性
 + 使用脚本优缺点恰恰与第一种方法相反
+
+本文还提到了一种使用qml文件包裹c++自定义类型的方法，见参考链接2。
 
 不多说，直接上代码：
 
@@ -112,6 +115,13 @@ Window {
         console.log(Qt.isQtObject(MyJsObj.my_js_obj))
 
         MyJsObj.my_js_obj.func();
+
+        var componentWrapper = Qt.createComponent("MyCustomObjWrapper.qml")
+        var obj = componentWrapper.createObject(mainWindow);
+
+        console.log(typeof(obj))
+        console.log(Qt.isQtObject(obj))
+        obj.func();
     }
 
     MainForm {
@@ -123,6 +133,7 @@ Window {
         }
     }
 }
+
 ```
 
 MainForm.ui.qml
@@ -148,10 +159,27 @@ Rectangle {
 
 ```
 
+MyCustomObjWrapper.qml
+```qml
+import QtQuick 2.0
+
+import com.myProject.myCustomStuff 1.0
+
+MyCustomObj {
+    id: obj
+    Component.onCompleted: {
+        console.log("Created from QML dynamically ")
+        obj.func()
+    }
+}
+
+```
+
 MyObj.js
 ```javascript
 var my_js_obj = null;
 ```
+
 
 </xmp>
 

@@ -22,7 +22,11 @@
 
 <xmp theme="united" style="display:none;">
 
-参考: http://stackoverflow.com/questions/12564289/how-can-i-add-property-dynamically-to-a-qml-element
+参考: 
+
++ http://stackoverflow.com/questions/12564289/how-can-i-add-property-dynamically-to-a-qml-element
++ [Importing JavaScript Resources in QML](http://doc.qt.io/qt-5/qtqml-javascript-imports.html)
++ [Dynamic QML Object Creation from JavaScript](http://doc.qt.io/qt-5/qtqml-javascript-dynamicobjectcreation.html)
 
 目前发现有两种方法，第一种方法是使用property var，第二种方法是使用脚本。两种方法各有优缺点:
 
@@ -82,7 +86,7 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    title: qsTr("qml-dynamic-create-cpp-object")
     property var my_obj;
 
     Component {
@@ -94,17 +98,19 @@ Window {
     }
 
     Component.onCompleted: {
-        var obj = myComponent.createObject(mainWindow)
-        if (!obj) console.error("Error creating object")
+        my_obj = myComponent.createObject(mainWindow)
+        if (!my_obj) console.error("Error creating object")
 
-        console.log(typeof(obj))
-        console.log(Qt.isQtObject(obj))
+        console.log(typeof(my_obj))
+        console.log(Qt.isQtObject(my_obj))
 
-        obj.func()
+        my_obj.func()
 
-        my_obj = obj;
+        MyJsObj.my_js_obj = myComponent.createObject(mainWindow);
+        if (!MyJsObj.my_js_obj) console.error("Error creating object")
+        console.log(typeof(MyJsObj.my_js_obj))
+        console.log(Qt.isQtObject(MyJsObj.my_js_obj))
 
-        MyJsObj.createObj();
         MyJsObj.my_js_obj.func();
     }
 
@@ -112,7 +118,7 @@ Window {
         anchors.fill: parent
         mouseArea.onClicked: {
             Qt.quit();
-            my_obj.v();
+            my_obj.func();
             MyJsObj.my_js_obj.func();
         }
     }
@@ -145,11 +151,6 @@ Rectangle {
 MyObj.js
 ```javascript
 var my_js_obj = null;
-
-function createObj() {
-    my_js_obj = myComponent.createObject(mainWindow)
-}
-
 ```
 
 </xmp>

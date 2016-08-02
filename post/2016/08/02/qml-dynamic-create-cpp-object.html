@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<link rel="Shortcut Icon" href="http://qassert.com/favicon.ico" />
+<title>QML动态创建C++对象</title>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81720623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<xmp theme="united" style="display:none;">
+
+参考: http://stackoverflow.com/questions/12564289/how-can-i-add-property-dynamically-to-a-qml-element
+
+目前发现有两种方法，第一种方法是使用property var，第二种方法是使用脚本。两种方法各有优缺点:
+
++ 使用property var，不需要外挂脚本，代码简单清晰，但是会对外暴露不必要的属性
++ 使用脚本优缺点恰恰与第一种方法相反
+
+不多说，直接上代码：
+
+MyCustomObj.h
+```cpp
+#ifndef MYCUSTOMOBJ_H
+#define MYCUSTOMOBJ_H
+
+#include <QObject>
+
+class MyCustomObj : public QObject
+{
+    Q_OBJECT
+public:
+    explicit MyCustomObj(QObject *parent = 0);
+
+    Q_INVOKABLE void func();
+};
+
+#endif // MYCUSTOMOBJ_H
+```
+
+MyCustomObj.cpp
+```cpp
+#include "MyCustomObj.h"
+
+#include <QDebug>
+
+MyCustomObj::MyCustomObj(QObject *parent) : QObject(parent)
+{
+
+}
+
+void MyCustomObj::func()
+{
+    qDebug("Fun with QML");
+}
+
+```
+
+main.qml
+```qml
+import QtQuick 2.7
+import QtQuick.Window 2.2
+
+import com.myProject.myCustomStuff 1.0
+
+import "MyObj.js" as MyJsObj
+
+Window {
+    id: mainWindow
+    visible: true
+    width: 640
+    height: 480
+    title: qsTr("Hello World")
+    property var my_obj;
+
+    Component {
+        id: myComponent
+
+        MyCustomObj {
+
+        }
+    }
+
+    Component.onCompleted: {
+        var obj = myComponent.createObject(mainWindow)
+        if (!obj) console.error("Error creating object")
+
+        console.log(typeof(obj))
+        console.log(Qt.isQtObject(obj))
+
+        obj.func()
+
+        my_obj = obj;
+
+        MyJsObj.createObj();
+        MyJsObj.my_js_obj.func();
+    }
+
+    MainForm {
+        anchors.fill: parent
+        mouseArea.onClicked: {
+            Qt.quit();
+            my_obj.v();
+            MyJsObj.my_js_obj.func();
+        }
+    }
+}
+```
+
+MainForm.ui.qml
+```qml
+import QtQuick 2.7
+
+Rectangle {
+    property alias mouseArea: mouseArea
+
+    width: 360
+    height: 360
+
+    MouseArea {
+        id: mouseArea
+        anchors.fill: parent
+    }
+
+    Text {
+        anchors.centerIn: parent
+        text: "Hello World"
+    }
+}
+
+```
+
+MyObj.js
+```javascript
+var my_js_obj = null;
+
+function createObj() {
+    my_js_obj = myComponent.createObject(mainWindow)
+}
+
+```
+
+</xmp>
+
+<script src="http://ob0e7n022.bkt.clouddn.com/strapdown.js"></script>
+
+<a href="http://qassert.com"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1000; margin: 0;" src="http://ob0e7n022.bkt.clouddn.com/images/return-home.png" alt="返回首页"></a>
+
+</body>
+
+</html>

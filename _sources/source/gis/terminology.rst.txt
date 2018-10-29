@@ -1,0 +1,6 @@
+术语
+==================
+
+- geocentric
+- geographic
+- geodetic

@@ -1,9 +1,0 @@
-GIS
-==================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   terminology
-

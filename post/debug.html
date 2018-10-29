@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>调试方法 &mdash; ExAMYEs  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="TODO" href="todo.html" />
+    <link rel="prev" title="术语" href="gis/terminology.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ExAMYEs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="osg/index.html">OpenSceneGraph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osgEarth/index.html">osgEarth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gis/index.html">GIS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">调试方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#opengl">OpenGL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="old/index.html">旧资源</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ExAMYEs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>调试方法</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/post/debug.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>调试方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="opengl">
+<h2>OpenGL<a class="headerlink" href="#opengl" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><dl class="first docutils">
+<dt>官网的Common Mistakes</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://www.khronos.org/opengl/wiki/Common_Mistakes">https://www.khronos.org/opengl/wiki/Common_Mistakes</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>从 <a class="reference external" href="https://doc.qt.io/qt-5/qt3drender-protips.html#useful-tools">Qt 3D Render Pro Tips</a> 获取的信息</dt>
+<dd><ul class="first simple">
+<li><a class="reference external" href="http://apitrace.github.io/">apitrace</a> （经测试可用）</li>
+</ul>
+<p>32位的程序使用x86的版本，64位的程序使用x64版本</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/ValveSoftware/vogl">vogl</a></li>
+</ul>
+<p class="last">好像有几年不更新了，并且功能上貌似与apitrace比较接近</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>从 apitrace 获取的信息</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://apitrace.github.io">http://apitrace.github.io</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>从 <a class="reference external" href="https://www.khronos.org/opengl/wiki/Debugging_Tools">OpenGL官网</a> 获取的信息</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://www.khronos.org/opengl/wiki/Debugging_Tools">https://www.khronos.org/opengl/wiki/Debugging_Tools</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>从以下网址获得的信息</dt>
+<dd><ul class="first last simple">
+<li>OpenGL 图形库的使用（四十五）—— 实战之调试Debugging <a class="reference external" href="https://www.jianshu.com/p/7c81d561097e">https://www.jianshu.com/p/7c81d561097e</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>RenderDoc</dt>
+<dd><ul class="first simple">
+<li><a class="reference external" href="https://renderdoc.org/">https://renderdoc.org/</a></li>
+</ul>
+<p class="last">只支持OpenGL 3.2+ Core Profile，osgearth_viewer无法capture</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>nsight graphics</dt>
+<dd><ul class="first simple">
+<li><a class="reference external" href="https://developer.nvidia.com/nsight-graphics">https://developer.nvidia.com/nsight-graphics</a></li>
+</ul>
+<p class="last">对不严格遵循OpenGL规范(OpenGL 4.2 - 4.5, <a class="reference external" href="https://developer.nvidia.com/nsight-graphics-features">https://developer.nvidia.com/nsight-graphics-features</a>)的程序支持很不好，比如osg…，我的天···
+还有一个Visual Studio(nsight VSE)版本的, <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition">https://developer.nvidia.com/nsight-visual-studio-edition</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>AMD codexl</dt>
+<dd><ul class="first simple">
+<li><a class="reference external" href="https://gpuopen.com/compute-product/codexl/">https://gpuopen.com/compute-product/codexl/</a></li>
+</ul>
+<p class="last">貌似只支持A卡</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="todo.html" class="btn btn-neutral float-right" title="TODO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gis/terminology.html" class="btn btn-neutral" title="术语" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, examyes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

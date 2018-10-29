@@ -1,0 +1,7 @@
+FAQ
+===============================
+
+OpenGL FAQ
+-------------------------
+- 10 Clipping, Culling, and Visibility Testing
+    https://www.opengl.org/archives/resources/faq/technical/clipping.htm

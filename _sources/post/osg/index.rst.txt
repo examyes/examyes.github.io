@@ -8,4 +8,7 @@ OpenSceneGraph
    envvar
    manipulator
    macros
+   renderbin
+   rtt
+   stencil
 

@@ -1,0 +1,28 @@
+Stencil
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+references
+=============================
+
+links
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+- 用OpenSceneGraph实现的NeHe OpenGL教程 - 第二十六课
+
+https://blog.csdn.net/csxiaoshui/article/details/25186055
+
+- OpenGL模板缓冲区---StencilBuffer
+
+https://blog.csdn.net/csxiaoshui/article/details/23457273
+
+NeHe
+==================================
+- NeHe26-ClippingAndReflectionsUsingTheStencilBuffer
+
+osg Examples or Applications
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+osg Examples
+::::::::::::::::::::::::::::::::::
+
+- osgpackeddepthstencil
+- osgreflect

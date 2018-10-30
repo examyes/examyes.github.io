@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>osgEarth &mdash; ExAMYEs  文档</title>
+  <title>Render State &mdash; ExAMYEs  文档</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="osgEarth Applications" href="applications/index.html" />
-    <link rel="prev" title="FAQ" href="../osg/faq.html" /> 
+    <link rel="next" title="RTT - Render To Texture" href="rtt.html" />
+    <link rel="prev" title="RenderBin" href="renderbin.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -80,12 +80,21 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../osg/index.html">OpenSceneGraph</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">osgEarth</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="applications/index.html">osgEarth Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="todo.html">TODO</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenSceneGraph</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="envvar.html">OpenSceneGraph中的环境变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulator.html">Manipulator 操作器、操纵器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros.html">Macro, 宏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="renderbin.html">RenderBin</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Render State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#links">links</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="rtt.html">RTT - Render To Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stencil.html">Stencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../osgEarth/index.html">osgEarth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gis/index.html">GIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenGL/index.html">OpenGL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../debug.html">调试方法</a></li>
@@ -136,13 +145,15 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>osgEarth</li>
+          <li><a href="index.html">OpenSceneGraph</a> &raquo;</li>
+        
+      <li>Render State</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/post/osgEarth/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/post/osg/state.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,19 +166,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="osgearth">
-<h1>osgEarth<a class="headerlink" href="#osgearth" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
+  <div class="section" id="render-state">
+<h1>Render State<a class="headerlink" href="#render-state" title="永久链接至标题">¶</a></h1>
+<div class="section" id="links">
+<h2>links<a class="headerlink" href="#links" title="永久链接至标题">¶</a></h2>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="applications/index.html">osgEarth Applications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="applications/osgearth_overlayviewer.html">osgearth_overlayviewer</a></li>
-</ul>
+<li><dl class="first docutils">
+<dt>OSG的渲染树与状态树</dt>
+<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/a819721810/article/details/77823447">https://blog.csdn.net/a819721810/article/details/77823447</a></p>
+</dd>
+</dl>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="todo.html#applications">applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="todo.html#tests">tests</a></li>
+<li><dl class="first docutils">
+<dt>OSG渲染状态管理</dt>
+<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/csxiaoshui/article/details/74859066">https://blog.csdn.net/csxiaoshui/article/details/74859066</a></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Open Scene Graph States and StateSets by Tim Moore</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>Part 1: Everything You Always Wanted to Know About StateSets (But Were Afraid to Ask)</dt>
+<dd><a class="reference external" href="http://www.bricoworks.com/articles/stateset/stateset.html">http://www.bricoworks.com/articles/stateset/stateset.html</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Part 2: the StateGraph</dt>
+<dd><a class="reference external" href="http://www.bricoworks.com/articles/stategraph/stategraph.html">http://www.bricoworks.com/articles/stategraph/stategraph.html</a></dd>
+</dl>
+</li>
 </ul>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>OSG场景图状态和状态集第1部分</dt>
+<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/kasteluo/article/details/80691359">https://blog.csdn.net/kasteluo/article/details/80691359</a></p>
+</dd>
+</dl>
 </li>
 </ul>
 </div>
@@ -181,10 +217,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="applications/index.html" class="btn btn-neutral float-right" title="osgEarth Applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rtt.html" class="btn btn-neutral float-right" title="RTT - Render To Texture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../osg/faq.html" class="btn btn-neutral" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="renderbin.html" class="btn btn-neutral" title="RenderBin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

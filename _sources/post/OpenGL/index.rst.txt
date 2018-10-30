@@ -6,5 +6,6 @@ OpenGL
    :caption: Contents:
 
    faq
+   resources
 
 

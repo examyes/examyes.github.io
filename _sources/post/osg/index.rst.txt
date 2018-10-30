@@ -9,6 +9,8 @@ OpenSceneGraph
    manipulator
    macros
    renderbin
+   state
    rtt
    stencil
+   faq
 

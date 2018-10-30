@@ -1,0 +1,21 @@
+Render State
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+-------------------------------
+- OSG的渲染树与状态树
+    https://blog.csdn.net/a819721810/article/details/77823447
+
+- OSG渲染状态管理
+    https://blog.csdn.net/csxiaoshui/article/details/74859066    
+
+- Open Scene Graph States and StateSets by Tim Moore
+
+    + Part 1: Everything You Always Wanted to Know About StateSets (But Were Afraid to Ask)
+        http://www.bricoworks.com/articles/stateset/stateset.html
+
+    + Part 2: the StateGraph
+        http://www.bricoworks.com/articles/stategraph/stategraph.html
+
+- OSG场景图状态和状态集第1部分        
+    https://blog.csdn.net/kasteluo/article/details/80691359

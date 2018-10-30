@@ -1,0 +1,8 @@
+OpenGL Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+--------------------------------------------
+- OpenGL Registry
+    - https://www.khronos.org/registry/OpenGL/index_gl.php
+    - https://www.khronos.org/registry/OpenGL-Refpages

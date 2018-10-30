@@ -5,3 +5,8 @@ OpenGL FAQ
 -------------------------
 - 10 Clipping, Culling, and Visibility Testing
     https://www.opengl.org/archives/resources/faq/technical/clipping.htm
+
+- glEnable / glDisable
+    https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEnable.xml
+    https://www.khronos.org/registry/OpenGL-Refpages/gl4//
+    https://www.khronos.org/opengl/wiki/GLAPI/glEnable

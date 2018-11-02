@@ -5,4 +5,7 @@ links
 ------------------------------------------
 - Flightgear操作方式以及几种典型飞机的起飞方法
     https://blog.csdn.net/qq_24848645/article/details/44177635
+
+- FlightGear 官方手册中文翻译全部完成
+    https://tonghuix.io/2016/01/flightgear-getstart-chinese-translation/    
     

@@ -15,6 +15,7 @@ Welcome to ExAMYEs's Portal!
    post/gis/index
    post/OpenGL/index
    post/FlightGear/index
+   post/FDM/index
    post/debug
    post/todo
    post/old/index

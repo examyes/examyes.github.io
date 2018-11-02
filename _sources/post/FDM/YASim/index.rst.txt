@@ -1,11 +1,9 @@
-osgEarth
+YASim
 ==================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   applications/index
    faq
-   todo
 

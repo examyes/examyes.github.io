@@ -1,0 +1,11 @@
+YASim FAQ
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+------------------------------------------
+- Website
+    http://wiki.flightgear.org/YASim
+
+- YASim使用指南
+    http://www.buckarooshangar.com/flightgear/yasimtut.html    
+

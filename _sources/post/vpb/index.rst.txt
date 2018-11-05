@@ -1,0 +1,11 @@
+Virtual Planet Builder
+==================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   faq
+   resources
+
+

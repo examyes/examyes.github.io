@@ -1,0 +1,20 @@
+VPB Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+--------------------------------------------
+- Official Website
+    http://www.openscenegraph.org/index.php/documentation/tools/virtual-planet-builder/     
+
+- VIRTUALPLANETBUILDER (vpb) osgdem 用法
+    https://blog.csdn.net/liukai0908/artcle/details/8107450
+
+- VirtualPlanetBuilder入门简介
+    http://www.52vr.com/article-213-1.html   
+
+
+books
+--------------------------------------------
+- OpenSceneGraph 3 Cookbook
+    Chapter 7. Visualizing the World
+

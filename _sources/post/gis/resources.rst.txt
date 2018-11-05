@@ -1,0 +1,47 @@
+GIS Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+--------------------------------------------
+
+data
+--------------------------------------------
+- vterrain.org, WholeEarth
+    http://vterrain.org/Imagery/WholeEarth/
+
+- www.cc.gatech.edu
+    + https://www.cc.gatech.edu/projects/large_models/ 
+    + https://www.cc.gatech.edu/projects/large_models/ps.html    
+    + https://www.cc.gatech.edu/projects/large_models/gcanyon.html
+
+- True Marble Global Image Dataset GeoTIFF	
+    http://academictorrents.com/details/b9b284d9c0074846fee28e78aac4440fd7c0f51c    
+
+
+- Visiable Earth
+    https://visibleearth.nasa.gov/
+
+    + BLUE MARBLE: LAND SURFACE, SHALLOW WATER, AND SHADED TOPOGRAPHY
+        https://visibleearth.nasa.gov/view.php?id=57752    
+
+- NASA BlueMarble
+    https://earthobservatory.nasa.gov/Features/BlueMarble/BlueMarble_2002.php
+    https://grasswiki.osgeo.org/wiki/Blue_Marble
+
+- Earth images 
+    https://www.evl.uic.edu/pape/data/Earth/   
+
+- CGIAR
+    http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp     
+
+
+- 地理空间数据云
+    http://www.gscloud.cn    
+
+- 如何下载10米精度的谷歌地球高程数据
+    http://www.rivermap.cn/docs/show-1674.html    
+
+books
+--------------------------------------------
+
+

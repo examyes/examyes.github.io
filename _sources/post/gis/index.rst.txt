@@ -6,4 +6,5 @@ GIS
    :caption: Contents:
 
    terminology
+   resources
 

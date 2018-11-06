@@ -1,0 +1,47 @@
+OpenSceneGraph Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+--------------------------------------------
+- osgToy, mew's OpenSceneGraph Projects
+    http://mew.cx/osg/
+    https://sourceforge.net/projects/osgtoy/
+    https://github.com/mew-cx/osgtoy
+
+- osgVirtualEnvironment
+    https://sourceforge.net/projects/osgve/
+
+- Palomino flight simulator
+    https://sourceforge.net/projects/palomino-sim/
+
+- Lexolights
+    https://sourceforge.net/projects/lexolights/
+
+- osgXI
+    https://sourceforge.net/projects/osgxi/                
+
+- zSim flight simulator    
+    https://sourceforge.net/projects/zsim/
+
+- osgPhysics
+    https://sourceforge.net/projects/osgphysics/
+
+- osgCal, Cal3D adapter for OpenSceneGraph
+    https://sourceforge.net/projects/osgcal/     
+
+- osgNV
+    https://sourceforge.net/projects/osgnv/files/
+
+- SceneEdit           
+    https://sourceforge.net/projects/sceneedit/
+
+- OpenRoadEd
+    https://sourceforge.net/projects/openroaded/files/
+
+- TASim Flight Simulator
+    https://sourceforge.net/projects/tasim/
+
+- osgAL, OpenSceneGraph Audio Library
+    https://sourceforge.net/projects/osgal/
+
+- osgNewton

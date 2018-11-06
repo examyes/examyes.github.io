@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>OpenSceneGraph中的环境变量 &mdash; ExAMYEs  文档</title>
+  <title>OpenSceneGraph Resources &mdash; ExAMYEs  文档</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="Manipulator 操作器、操纵器" href="manipulator.html" />
-    <link rel="prev" title="OpenSceneGraph" href="index.html" /> 
+    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="prev" title="Stencil" href="stencil.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -81,18 +81,17 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenSceneGraph</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">OpenSceneGraph中的环境变量</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">寻找方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">可能会用到的环境变量</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="envvar.html">OpenSceneGraph中的环境变量</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulator.html">Manipulator 操作器、操纵器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="macros.html">Macro, 宏</a></li>
 <li class="toctree-l2"><a class="reference internal" href="renderbin.html">RenderBin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="state.html">Render State</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rtt.html">RTT - Render To Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stencil.html">Stencil</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resources.html">OpenSceneGraph Resources</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">OpenSceneGraph Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#links">links</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
 </li>
@@ -152,13 +151,13 @@
         
           <li><a href="index.html">OpenSceneGraph</a> &raquo;</li>
         
-      <li>OpenSceneGraph中的环境变量</li>
+      <li>OpenSceneGraph Resources</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/post/osg/envvar.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/post/osg/resources.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,46 +170,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="openscenegraph">
-<h1>OpenSceneGraph中的环境变量<a class="headerlink" href="#openscenegraph" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
-<h2>寻找方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<ul class="simple">
-<li>搜索getEnvVar</li>
-</ul>
-</div>
-<div class="section" id="id2">
-<h2>可能会用到的环境变量<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+  <div class="section" id="openscenegraph-resources">
+<h1>OpenSceneGraph Resources<a class="headerlink" href="#openscenegraph-resources" title="永久链接至标题">¶</a></h1>
+<div class="section" id="links">
+<h2>links<a class="headerlink" href="#links" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><dl class="first docutils">
-<dt>DisplaySettings.cpp 包含大量相关设置</dt>
-<dd><ul class="first last">
-<li>OSG_NUM_DATABASE_THREADS</li>
-<li>OSG_NUM_HTTP_DATABASE_THREADS</li>
-<li>OSG_MULTI_SAMPLES</li>
-<li>…</li>
-</ul>
-</dd>
+<dt>osgToy, mew’s OpenSceneGraph Projects</dt>
+<dd><a class="reference external" href="http://mew.cx/osg/">http://mew.cx/osg/</a>
+<a class="reference external" href="https://sourceforge.net/projects/osgtoy/">https://sourceforge.net/projects/osgtoy/</a>
+<a class="reference external" href="https://github.com/mew-cx/osgtoy">https://github.com/mew-cx/osgtoy</a></dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>ViewerBase.cpp</dt>
-<dd><ul class="first last">
+<dt>osgVirtualEnvironment</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/osgve/">https://sourceforge.net/projects/osgve/</a></dd>
+</dl>
+</li>
 <li><dl class="first docutils">
-<dt>OSG_THREADING</dt>
-<dd><ul class="first last">
-<li>SingleThreaded</li>
-<li>CullDrawThreadPerContext</li>
-<li>DrawThreadPerContext</li>
-<li>CullThreadPerCameraDrawThreadPerContext</li>
-</ul>
-</dd>
+<dt>Palomino flight simulator</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/palomino-sim/">https://sourceforge.net/projects/palomino-sim/</a></dd>
 </dl>
 </li>
-</ul>
-</dd>
+<li><dl class="first docutils">
+<dt>Lexolights</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/lexolights/">https://sourceforge.net/projects/lexolights/</a></dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt>osgXI</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/osgxi/">https://sourceforge.net/projects/osgxi/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>zSim flight simulator</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/zsim/">https://sourceforge.net/projects/zsim/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgPhysics</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/osgphysics/">https://sourceforge.net/projects/osgphysics/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgCal, Cal3D adapter for OpenSceneGraph</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/osgcal/">https://sourceforge.net/projects/osgcal/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgNV</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/osgnv/files/">https://sourceforge.net/projects/osgnv/files/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>SceneEdit</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/sceneedit/">https://sourceforge.net/projects/sceneedit/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpenRoadEd</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/openroaded/files/">https://sourceforge.net/projects/openroaded/files/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>TASim Flight Simulator</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/tasim/">https://sourceforge.net/projects/tasim/</a></dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgAL, OpenSceneGraph Audio Library</dt>
+<dd><a class="reference external" href="https://sourceforge.net/projects/osgal/">https://sourceforge.net/projects/osgal/</a></dd>
+</dl>
+</li>
+<li>osgNewton</li>
 </ul>
 </div>
 </div>
@@ -223,10 +255,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="manipulator.html" class="btn btn-neutral float-right" title="Manipulator 操作器、操纵器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="OpenSceneGraph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="stencil.html" class="btn btn-neutral" title="Stencil" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

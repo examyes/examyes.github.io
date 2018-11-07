@@ -6,3 +6,9 @@ links
 - OpenGL Registry
     - https://www.khronos.org/registry/OpenGL/index_gl.php
     - https://www.khronos.org/registry/OpenGL-Refpages
+
+- lighthouse3d
+    http://www.lighthouse3d.com/    
+
+- OpenGLBook.com
+    http://openglbook.com/the-book.html

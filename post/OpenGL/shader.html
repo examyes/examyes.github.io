@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>FlightGear &mdash; ExAMYEs  文档</title>
+  <title>Shader &mdash; ExAMYEs  文档</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="FlightGear FAQ" href="faq.html" />
-    <link rel="prev" title="Shader" href="../OpenGL/shader.html" /> 
+    <link rel="next" title="FlightGear" href="../FlightGear/index.html" />
+    <link rel="prev" title="OpenGL Resources" href="resources.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -83,11 +83,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../osg/index.html">OpenSceneGraph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osgEarth/index.html">osgEarth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gis/index.html">GIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../OpenGL/index.html">OpenGL</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">FlightGear</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html">FlightGear FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenGL</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html">OpenGL Resources</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Shader</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#links">links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#books">books</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FlightGear/index.html">FlightGear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FDM/index.html">Flight Dymanic Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vpb/index.html">Virtual Planet Builder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../debug.html">调试方法</a></li>
@@ -138,13 +144,15 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>FlightGear</li>
+          <li><a href="index.html">OpenGL</a> &raquo;</li>
+        
+      <li>Shader</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/post/FlightGear/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/post/OpenGL/shader.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,15 +165,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="flightgear">
-<h1>FlightGear<a class="headerlink" href="#flightgear" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
+  <div class="section" id="shader">
+<h1>Shader<a class="headerlink" href="#shader" title="永久链接至标题">¶</a></h1>
+<div class="section" id="links">
+<h2>links<a class="headerlink" href="#links" title="永久链接至标题">¶</a></h2>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FlightGear FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#links">links</a></li>
-</ul>
+<li><dl class="first docutils">
+<dt>awesome-glsl</dt>
+<dd><p class="first last"><a class="reference external" href="https://github.com/radixzz/awesome-glsl">https://github.com/radixzz/awesome-glsl</a></p>
+</dd>
+</dl>
 </li>
+<li><dl class="first docutils">
+<dt>blogs</dt>
+<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/stalendp/article/category/1628145">https://blog.csdn.net/stalendp/article/category/1628145</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>shadertoy</dt>
+<dd><p class="first"><a class="reference external" href="https://www.shadertoy.com/">https://www.shadertoy.com/</a></p>
+<p><a class="reference external" href="https://www.zhihu.com/question/22514128">https://www.zhihu.com/question/22514128</a></p>
+<p><a class="reference external" href="https://blog.csdn.net/candycat1992/article/details/44039077">https://blog.csdn.net/candycat1992/article/details/44039077</a></p>
+<p class="last"><a class="reference external" href="https://www.shadertoy.com/user/iq">https://www.shadertoy.com/user/iq</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>thebookofshaders</dt>
+<dd><p class="first last"><a class="reference external" href="https://thebookofshaders.com">https://thebookofshaders.com</a>
+<a class="reference external" href="https://thebookofshaders.com/?lan=ch">https://thebookofshaders.com/?lan=ch</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>GLSL. 语法基础</dt>
+<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/misol/article/details/7658949">https://blog.csdn.net/misol/article/details/7658949</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>GLSL 内建函数</dt>
+<dd><p class="first last"><a class="reference external" href="http://www.cnblogs.com/kex1n/p/3941765.html">http://www.cnblogs.com/kex1n/p/3941765.html</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>【OpenGL】使用Unity来学习OpenGL</dt>
+<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/stalendp/article/details/11492525">https://blog.csdn.net/stalendp/article/details/11492525</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>【OpenGL】Shader技巧集合</dt>
+<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/stalendp/article/details/18745663">https://blog.csdn.net/stalendp/article/details/18745663</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="books">
+<h2>books<a class="headerlink" href="#books" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><a class="reference external" href="https://blog.csdn.net/stalendp/article/details/11492525">https://blog.csdn.net/stalendp/article/details/11492525</a></div></blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>thebookofshaders</dt>
+<dd><a class="reference external" href="https://thebookofshaders.com">https://thebookofshaders.com</a>
+<a class="reference external" href="https://thebookofshaders.com/?lan=ch">https://thebookofshaders.com/?lan=ch</a></dd>
+</dl>
+</li>
+<li>OpenGL SuperBible 5th Edition</li>
+<li>OpenGL 4 Shanding Language Cookbook</li>
+<li>Unity Shaders and Effects Cookbook</li>
 </ul>
 </div>
 </div>
@@ -178,10 +250,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="faq.html" class="btn btn-neutral float-right" title="FlightGear FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../FlightGear/index.html" class="btn btn-neutral float-right" title="FlightGear" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../OpenGL/shader.html" class="btn btn-neutral" title="Shader" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="resources.html" class="btn btn-neutral" title="OpenGL Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

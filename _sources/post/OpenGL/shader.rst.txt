@@ -1,0 +1,51 @@
+Shader
+============================
+
+
+links
+----------------------------
+- awesome-glsl
+    https://github.com/radixzz/awesome-glsl
+    
+- blogs
+    https://blog.csdn.net/stalendp/article/category/1628145
+
+- shadertoy
+    https://www.shadertoy.com/
+
+    https://www.zhihu.com/question/22514128
+
+    https://blog.csdn.net/candycat1992/article/details/44039077
+
+    https://www.shadertoy.com/user/iq
+
+- thebookofshaders
+    https://thebookofshaders.com
+    https://thebookofshaders.com/?lan=ch    
+
+- GLSL. 语法基础
+    https://blog.csdn.net/misol/article/details/7658949
+
+- GLSL 内建函数
+    http://www.cnblogs.com/kex1n/p/3941765.html    
+
+- 【OpenGL】使用Unity来学习OpenGL
+    https://blog.csdn.net/stalendp/article/details/11492525
+
+- 【OpenGL】Shader技巧集合
+    https://blog.csdn.net/stalendp/article/details/18745663    
+
+
+books
+-----------------------------------    
+    https://blog.csdn.net/stalendp/article/details/11492525
+
+- thebookofshaders
+    https://thebookofshaders.com
+    https://thebookofshaders.com/?lan=ch  
+
+- OpenGL SuperBible 5th Edition
+
+- OpenGL 4 Shanding Language Cookbook
+
+- Unity Shaders and Effects Cookbook

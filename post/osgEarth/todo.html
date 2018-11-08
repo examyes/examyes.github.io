@@ -169,9 +169,162 @@
 <h1>TODO<a class="headerlink" href="#todo" title="永久链接至标题">¶</a></h1>
 <div class="section" id="applications">
 <h2>applications<a class="headerlink" href="#applications" title="永久链接至标题">¶</a></h2>
+<p>以下的例子没有跑出效果
+- osgearth_overlayviewer</p>
 <ul class="simple">
-<li>osgearth_overlayviewer</li>
+<li>osgearth_htm</li>
+<li>osgearth_atlas</li>
+<li>osgearth_computerangecallback</li>
+<li>osgearth_datetime</li>
+<li>osgearth_featurefilter</li>
+<li>osgearth_featureinfo</li>
+<li>osgearth_featurequery</li>
+<li>osgearth_http</li>
+<li>osgearth_noisegen</li>
+<li>osgearth_scenegraphcallbacks</li>
+<li>osgearth_sequencecontrol</li>
+<li><dl class="first docutils">
+<dt>osgearth_shadercomp google_cn.earth</dt>
+<dd>测试shadercomp的各种功能, 默认的earth文件需要修改？</dd>
+</dl>
+</li>
+<li>osgearth_shadergen</li>
+<li>osgearth_tfs</li>
+<li>osgearth_tileindex</li>
+<li>osgearth_transform</li>
+<li>osgearth_video</li>
+<li>osgearth_wfs</li>
 </ul>
+<p>以下的例子需要研究源码</p>
+<ul>
+<li><p class="first">osgearth_los</p>
+<blockquote>
+<div><p>Line Of Sight 结合高程的可视分系</p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_magnify</dt>
+<dd><p class="first last">两个地球，其中一个可以控制另外一个地球的放大等级</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_manip</dt>
+<dd><p class="first last">EarthManipulator的各种测试，其Tether的测试是有Bug的</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_map</dt>
+<dd><p class="first last">各种的功能的混合？</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_measure</dt>
+<dd><p class="first last">量测，可以测两点，也可以测路劲</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_minimap</dt>
+<dd><p class="first last">左下角小地图，功能很欠缺，没有与大地图同步</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_mrt</dt>
+<dd><p class="first last">很血腥的效果，不知道在干什么</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_occlusionculling</dt>
+<dd><p class="first last">聚集裁减？</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_pick annotation.earth</dt>
+<dd><p class="first last">选择annotation</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_shadercomp google_cn.earth</dt>
+<dd><p class="first last">测试shadercomp的各种功能, 默认的earth文件需要修改？</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_silverlining google_cn_nosky.earth</dt>
+<dd><p class="first last">silverlining的云、雨、雪、雾效果</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_skyview</dt>
+<dd><p class="first last">不知道在干啥</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_splat</dt>
+<dd><p class="first last">植被？ 缺少tif文件</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_srstest</dt>
+<dd><p class="first last">srs测试？</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_terrainprofile</dt>
+<dd><p class="first last">地形分析？</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgEarth_tests</dt>
+<dd><p class="first last">回归测试例程？居然有一个fail</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_tilesource</dt>
+<dd><p class="first last">自定义的tilesource ?</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_toc</dt>
+<dd><p class="first last">显示图层目录，控制图层</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_tracks</dt>
+<dd><p class="first last">好多小track。track是什么意思？</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_triton google_cn_nosky.earth</dt>
+<dd><p class="first last">海洋效果。可以控制参数。如果卡住，是因为对话框没有弹出来，在屏幕中间鼠标单击，然后按回车，也许就好了。什么时候能有license啊···</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>osgearth_windows gdal_simple.earth –views 4 –shared</dt>
+<dd><p class="first last">可以打开多个view，并且可以共享图形设备</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>以下的例子已经完全搞明白
+-</p>
 </div>
 <div class="section" id="tests">
 <h2>tests<a class="headerlink" href="#tests" title="永久链接至标题">¶</a></h2>

@@ -12,6 +12,7 @@ OpenSceneGraph
    state
    rtt
    stencil
-   resources
+   shader
+   resources   
    faq
 

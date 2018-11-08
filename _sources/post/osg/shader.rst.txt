@@ -1,0 +1,13 @@
+Shader
+=====================================
+
+内置的Uniform
+-------------------------------------
+SceneView.cpp / void SceneView::updateUniforms()
+- "osg_FrameNumber",osg::Uniform::UNSIGNED_INT
+- "osg_FrameTime",osg::Uniform::FLOAT
+- "osg_DeltaFrameTime",osg::Uniform::FLOAT
+- "osg_SimulationTime",osg::Uniform::FLOAT
+- "osg_DeltaSimulationTime",osg::Uniform::FLOAT
+- "osg_ViewMatrix",osg::Uniform::FLOAT_MAT4
+- "osg_ViewMatrixInverse",osg::Uniform::FLOAT_MAT4

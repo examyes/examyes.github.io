@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Render State &mdash; ExAMYEs  文档</title>
+  <title>Shader &mdash; ExAMYEs  文档</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="RTT - Render To Texture" href="rtt.html" />
-    <link rel="prev" title="RenderBin" href="renderbin.html" /> 
+    <link rel="next" title="OpenSceneGraph Resources" href="resources.html" />
+    <link rel="prev" title="Stencil" href="stencil.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -85,13 +85,13 @@
 <li class="toctree-l2"><a class="reference internal" href="manipulator.html">Manipulator 操作器、操纵器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="macros.html">Macro, 宏</a></li>
 <li class="toctree-l2"><a class="reference internal" href="renderbin.html">RenderBin</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Render State</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#links">links</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="state.html">Render State</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rtt.html">RTT - Render To Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stencil.html">Stencil</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shader.html">Shader</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Shader</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uniform">内置的Uniform</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="resources.html">OpenSceneGraph Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
@@ -152,13 +152,13 @@
         
           <li><a href="index.html">OpenSceneGraph</a> &raquo;</li>
         
-      <li>Render State</li>
+      <li>Shader</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/post/osg/state.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/post/osg/shader.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,46 +171,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="render-state">
-<h1>Render State<a class="headerlink" href="#render-state" title="永久链接至标题">¶</a></h1>
-<div class="section" id="links">
-<h2>links<a class="headerlink" href="#links" title="永久链接至标题">¶</a></h2>
-<ul>
-<li><dl class="first docutils">
-<dt>OSG的渲染树与状态树</dt>
-<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/a819721810/article/details/77823447">https://blog.csdn.net/a819721810/article/details/77823447</a></p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>OSG渲染状态管理</dt>
-<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/csxiaoshui/article/details/74859066">https://blog.csdn.net/csxiaoshui/article/details/74859066</a></p>
-</dd>
-</dl>
-</li>
-<li><p class="first">Open Scene Graph States and StateSets by Tim Moore</p>
-<blockquote>
-<div><ul class="simple">
-<li><dl class="first docutils">
-<dt>Part 1: Everything You Always Wanted to Know About StateSets (But Were Afraid to Ask)</dt>
-<dd><a class="reference external" href="http://www.bricoworks.com/articles/stateset/stateset.html">http://www.bricoworks.com/articles/stateset/stateset.html</a></dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Part 2: the StateGraph</dt>
-<dd><a class="reference external" href="http://www.bricoworks.com/articles/stategraph/stategraph.html">http://www.bricoworks.com/articles/stategraph/stategraph.html</a></dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><dl class="first docutils">
-<dt>OSG场景图状态和状态集第1部分</dt>
-<dd><p class="first last"><a class="reference external" href="https://blog.csdn.net/kasteluo/article/details/80691359">https://blog.csdn.net/kasteluo/article/details/80691359</a></p>
-</dd>
-</dl>
-</li>
-</ul>
+  <div class="section" id="shader">
+<h1>Shader<a class="headerlink" href="#shader" title="永久链接至标题">¶</a></h1>
+<div class="section" id="uniform">
+<h2>内置的Uniform<a class="headerlink" href="#uniform" title="永久链接至标题">¶</a></h2>
+<p>SceneView.cpp / void SceneView::updateUniforms()
+- “osg_FrameNumber”,osg::Uniform::UNSIGNED_INT
+- “osg_FrameTime”,osg::Uniform::FLOAT
+- “osg_DeltaFrameTime”,osg::Uniform::FLOAT
+- “osg_SimulationTime”,osg::Uniform::FLOAT
+- “osg_DeltaSimulationTime”,osg::Uniform::FLOAT
+- “osg_ViewMatrix”,osg::Uniform::FLOAT_MAT4
+- “osg_ViewMatrixInverse”,osg::Uniform::FLOAT_MAT4</p>
 </div>
 </div>
 
@@ -222,10 +194,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rtt.html" class="btn btn-neutral float-right" title="RTT - Render To Texture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="resources.html" class="btn btn-neutral float-right" title="OpenSceneGraph Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="renderbin.html" class="btn btn-neutral" title="RenderBin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="stencil.html" class="btn btn-neutral" title="Stencil" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

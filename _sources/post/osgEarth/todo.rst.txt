@@ -3,7 +3,122 @@ TODO
 
 applications
 ----------------------
+
+以下的例子没有跑出效果
 - osgearth_overlayviewer
+
+- osgearth_htm
+
+- osgearth_atlas
+
+- osgearth_computerangecallback
+
+- osgearth_datetime
+
+- osgearth_featurefilter
+
+- osgearth_featureinfo
+
+- osgearth_featurequery
+
+- osgearth_http
+
+- osgearth_noisegen
+
+- osgearth_scenegraphcallbacks
+
+- osgearth_sequencecontrol
+
+- osgearth_shadercomp google_cn.earth
+    测试shadercomp的各种功能, 默认的earth文件需要修改？
+
+- osgearth_shadergen
+
+- osgearth_tfs
+
+- osgearth_tileindex
+
+- osgearth_transform
+
+- osgearth_video
+
+- osgearth_wfs
+
+
+
+
+以下的例子需要研究源码
+
+- osgearth_los
+
+    Line Of Sight 结合高程的可视分系
+
+- osgearth_magnify
+    两个地球，其中一个可以控制另外一个地球的放大等级
+
+- osgearth_manip
+    EarthManipulator的各种测试，其Tether的测试是有Bug的
+
+- osgearth_map
+    各种的功能的混合？
+
+- osgearth_measure
+    量测，可以测两点，也可以测路劲
+
+- osgearth_minimap
+    左下角小地图，功能很欠缺，没有与大地图同步    
+
+- osgearth_mrt
+    很血腥的效果，不知道在干什么
+
+- osgearth_occlusionculling
+    聚集裁减？
+
+- osgearth_pick annotation.earth
+    选择annotation
+
+- osgearth_shadercomp google_cn.earth
+    测试shadercomp的各种功能, 默认的earth文件需要修改？    
+
+- osgearth_silverlining google_cn_nosky.earth
+    silverlining的云、雨、雪、雾效果
+
+- osgearth_skyview
+    不知道在干啥
+
+- osgearth_splat
+    植被？ 缺少tif文件
+
+- osgearth_srstest
+    srs测试？
+
+- osgearth_terrainprofile
+    地形分析？
+
+- osgEarth_tests
+    回归测试例程？居然有一个fail
+
+- osgearth_tilesource
+    自定义的tilesource ?
+
+- osgearth_toc
+    显示图层目录，控制图层
+
+- osgearth_tracks
+    好多小track。track是什么意思？
+
+- osgearth_triton google_cn_nosky.earth
+    海洋效果。可以控制参数。如果卡住，是因为对话框没有弹出来，在屏幕中间鼠标单击，然后按回车，也许就好了。什么时候能有license啊···
+
+- osgearth_windows gdal_simple.earth --views 4 --shared
+    可以打开多个view，并且可以共享图形设备        
+
+
+
+
+以下的例子已经完全搞明白
+- 
+
 
 
 tests

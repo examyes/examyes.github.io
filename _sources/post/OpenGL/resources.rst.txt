@@ -12,3 +12,8 @@ links
 
 - OpenGLBook.com
     http://openglbook.com/the-book.html
+
+- J3D.ORG - MATRIX FAQ
+    http://www.j3d.org/matrix_faq/    
+
+    

@@ -3,8 +3,15 @@ FAQ
 
 links
 ------------------------------------------
+- Official FAQ
+    http://www.openscenegraph.org/index.php/support/faq
+
 - OpenSceneGraph FAQ 以及OSG资源
     http://www.cnblogs.com/lyggqm/p/6222341.html
 
 - osg 60Hz帧率限制
     https://blog.csdn.net/kasteluo/article/details/79719766    
+
+- Debugging Tips
+    http://www.openscenegraph.org/index.php/documentation/debugging-tips
+  

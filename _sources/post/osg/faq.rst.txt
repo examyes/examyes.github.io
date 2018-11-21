@@ -14,4 +14,12 @@ links
 
 - Debugging Tips
     http://www.openscenegraph.org/index.php/documentation/debugging-tips
+
+
+utils
+-------------------------------------------
+- osg/io_utils
+
+能够用osg::Notify或者std::cout输出Vec3, Matrixd等数据内容
+
   

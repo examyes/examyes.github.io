@@ -3,6 +3,9 @@ OpenSceneGraph Resources
 
 links
 --------------------------------------------
+- Virtual Terrain Project
+    http://vterrain.org/
+
 - osgToy, mew's OpenSceneGraph Projects
     http://mew.cx/osg/
     https://sourceforge.net/projects/osgtoy/

@@ -10,3 +10,11 @@ OpenGL FAQ
     https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEnable.xml
     https://www.khronos.org/registry/OpenGL-Refpages/gl4//
     https://www.khronos.org/opengl/wiki/GLAPI/glEnable
+
+- tangent space
+    + OpenGL核心技术之切线空间
+        https://blog.csdn.net/jxw167/article/details/58671953
+
+    + 【D3D11游戏编程】学习笔记二十四：切线空间（Tangent Space）
+        https://blog.csdn.net/BonChoix/article/details/8619624
+         

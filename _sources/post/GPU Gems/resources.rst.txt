@@ -1,0 +1,17 @@
+GPU Gems Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+--------------------------------------------
+
+- 浅墨的游戏编程
+    https://zhuanlan.zhihu.com/game-programming
+    https://github.com/QianMo/Game-Programmer-Study-Notes
+    https://github.com/QianMo/GPU-Gems-Book-Source-Code
+
+- 【GPU精粹与Shader编程】(二) 《GPU Gems 1》全书核心内容提炼总结 · 上篇
+    https://zhuanlan.zhihu.com/p/35974789    
+
+- GPU Gems
+    https://developer.nvidia.com/gpugems/GPUGems/gpugems_pref01.html
+    http://http.download.nvidia.com/developer/GPU_Gems/CD_Image/Index.html

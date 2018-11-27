@@ -1,0 +1,13 @@
+Blender Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+links
+--------------------------------------------
+- Official Docs
+    https://docs.blender.org/
+
+- About python
+    https://blenderartists.org/t/does-blender-use-swig-or-something-else/662048/3
+    https://stackoverflow.com/questions/11961557/what-is-an-rna-or-dna-property
+    https://en.blender.org/index.php/Dev:2.5/Source/Architecture/RNA
+    https://docs.blender.org/api/current/    
